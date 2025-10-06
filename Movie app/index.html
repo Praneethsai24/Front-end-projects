@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Should I Watch It? — Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-hero">
+    <div class="hero-top">
+      <div class="branding">
+        <div class="logo" aria-hidden="true">🎬</div>
+        <div>
+          <a href="#" class="brand-title">Should I Watch It?</a>
+          <div class="brand-sub">Pick the right film. Fast.</div>
+        </div>
+      </div>
+      <nav class="top-nav" role="tablist" aria-label="Filters">
+        <button class="chip active" data-mode="popular">Popular</button>
+        <button class="chip" data-mode="top_rated">Top Rated</button>
+        <button class="chip" data-mode="now_playing">Now Playing</button>
+      </nav>
+      <div class="header-actions">
+        <input id="search" class="search" type="search" placeholder="Search movies — e.g. Parasite, Joker" aria-label="Search movies"/>
+      </div>
+    </div>
+    <div class="hero-main">
+      <div class="hero-media" id="heroMedia"></div>
+      <div class="hero-overlay">
+        <div class="hero-inner">
+          <h1 class="hero-title">Tonight’s Feature: <span id="heroMovieTitle">—</span></h1>
+          <p class="hero-sub">Critics say it’s unforgettable. Decide for yourself.</p>
+          <div class="hero-ctas">
+            <button class="btn primary" id="watchTrailerBtn">Watch Trailer</button>
+            <button class="btn ghost" id="addWatchlistBtn">+ Add to Watchlist</button>
+          </div>
+        </div>
+      </div>
+      <canvas id="filmGrain" class="film-grain" aria-hidden="true"></canvas>
+    </div>
+  </header>
+
+  <main id="main" class="movies-grid" aria-live="polite"></main>
+
+  <footer class="site-footer">
+    <p>This is an offline demo with local sample posters.</p>
+  </footer>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      <div class="modal-body">
+        <img id="modalPoster" src="" alt="Poster" />
+        <div class="modal-info">
+          <h2 id="modalTitle"></h2>
+          <p class="meta"><span id="modalRating" class="rating"></span> • <span id="modalRelease"></span></p>
+          <p id="modalOverview"></p>
+          <p id="modalExtra" class="muted"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
