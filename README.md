@@ -13,12 +13,12 @@ It allows you to play, pause, skip songs, and see album artwork with a progress 
 - Responsive design for mobile and desktop
 
 ## Project Structure
-music-player/
+music-player
 ─ index.html
 ─ css_styles.css
 ─ javascript.js
-─ img/
-─ music/
+─ img
+─ music
 
 
   ## Notes
